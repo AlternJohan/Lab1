@@ -29,7 +29,7 @@ const kernel = 1048576,
   stack = 65536,
   heap = 131072,
   encabezado = 180,
-  SO = new Program("S.O.", 431592, 207365, 916),
+  SO = new Program("S.O.", 431592, 207365, 916, "https://icon-library.com/images/dos-icon/dos-icon-5.jpg"),
   Notepad = new Program(
     "Notepad",
     18654,
@@ -99,13 +99,11 @@ let programas = [
 ];
 for (let p of programas) {
   p.resize();
-  if (p.nombre!=="S.O.") {
   fig = `<figure>
     <img src="${p.logo}" alt=" ">
     <figcaption><span>${p.nombre}</span></figcaption>
   </figure>`;
   $d.querySelector(".icons").innerHTML += fig;
-  }
 }
 
 programas.forEach((e, i) => {
